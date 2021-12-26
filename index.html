@@ -39,40 +39,26 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
 
         <!-- Page JS Plugins CSS -->
-        <link rel="stylesheet" href="assets/js/plugins/slick/slick.min.css">
-        <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.min.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.css">
+        
         <!-- Bootstrap and OneUI CSS framework -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+        <link rel="stylesheet" href="https://nezukostore.web.app/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="https://nezukostore.web.app/assets/css/oneui.css">
         
         <!-- Custom CSS -->
-        <link rel="stylesheet" id="css-main" href="assets/css/custom.css">
-       
-        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
-        <!-- END Stylesheets -->
+        <link rel="stylesheet" id="css-main" href="https://nezukostore.web.app/assets/css/custom.css">
+
+        <link rel="stylesheet" id="css-main" href="https://nezukostore.web.app/assets/css/loader.css">
+
     </head>
     <body>
-        <!-- Page Container -->
-        <!--
-            Available Classes:
-
-            'enable-cookies'             Remembers active color theme between pages (when set through color theme list)
-
-            'sidebar-l'                  Left Sidebar and right Side Overlay
-            'sidebar-r'                  Right Sidebar and left Side Overlay
-            'sidebar-mini'               Mini hoverable Sidebar (> 991px)
-            'sidebar-o'                  Visible Sidebar by default (> 991px)
-            'sidebar-o-xs'               Visible Sidebar by default (< 992px)
-
-            'side-overlay-hover'         Hoverable Side Overlay (> 991px)
-            'side-overlay-o'             Visible Side Overlay by default (> 991px)
-
-            'side-scroll'                Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (> 991px)
-
-            'header-navbar-fixed'        Enables fixed header
-        -->
+<div id="loader-wrapper">
+			<div id="loader"></div>
+			<div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+		</div>
         <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
 
             <!-- Sidebar -->
@@ -80,7 +66,8 @@
 
             <!-- Header -->
             <header id="header-navbar" class="content-mini content-mini-full">
-              <h1 class="page-heading">Nezuko Store</h1>
+              <img width="150px" src="https://nezukostore.web.app/assets/img/favicons/logo-header.png" alt="">
+            
                 <!-- END Header Navigation Left -->
             </header>
             <!-- END Header -->
@@ -93,7 +80,7 @@
                                
                 <!-- Page Header --
                 <div class="content bg-transparent">
-                   
+                   ""
                 </div>
                 <!-- END Page Header -->
 
@@ -103,8 +90,9 @@
                         <div class="col-sm-12">
                           <h2 class="h3 font-w600">Nezu Coin</h2>
                             <h1 class="h1 font-w600">
-                                <sup>Rp</sup>123{{saldo_member}}
+                                <sup><small>Rp</small></sup>{{saldo_user}}
                             </h1>
+                            <small>{{nama_user}}</small>
                         </div>
                     </div>
                     </br>
@@ -153,13 +141,13 @@
                               </div>
                               </div>
                                   
-                                  <div data-toggle="modal" data-target="#apps-modal" class="col-xs-3">
+                                  <div href="modal-game-mobile.html" data-toggle="modal" data-target="#apps-modal" class="col-xs-3">
                                     <div class="push-5">
-                              <i id="btn-icon-1" class="fas fa-mobile-alt fa-2x text-info"></i>
+                              <i class="fas fa-mobile-alt fa-2x text-info"></i>
                                <div class="font-w600 push-5-t">Pulsa</div>
                                </div>
                                </div>
-                                  <div data-toggle="modal" data-target="#apps-modal" id="btn-icon-paket-data" class="col-xs-3">
+                                  <div data-toggle="modal" data-target="#apps-modal" link="modal-game-mobile.html" id="btn-icon-paket-data" class="col-xs-3">
                                     <div class="push-5">
                               <i class="fas fa-exchange-alt fa-2x text-info"></i>
                                <div class="font-w600 push-5-t">Paket Data</div>
@@ -171,7 +159,7 @@
                                <div class="font-w600 push-5-t">Voucher</div>
                                </div>
                                </div>
-                                  <div class="col-xs-3">
+                                  <div data-toggle="modal" data-target="#e-wallet-modal" href="modahttps://raw.githubusercontent.com/denpurna/nezuko-store/main/modal-game-mobile.html" class="col-xs-3">
                                     <div class="push-5">
                               <i id="btn-icon-1" class="fas fa-coins fa-2x text-warning"></i>
                                   <div class="font-w600 push-5-t">E-Wallet</div>
@@ -179,13 +167,13 @@
                                   </div>
                                   <div class="col-xs-3">
                                     <div class="push-5">
-                              <i id="btn-icon-1" class="fab fa-bitcoin fa-2x text-warning"></i>
+                              <i class="fab fa-bitcoin fa-2x text-warning"></i>
                               <div class="font-w600 push-5-t">Apps</div>
                               </div>
                               </div>
-                                  <div class="col-xs-3">
+                                  <div id="btn-icon-game-mobile" data-toggle="modal" data-target="#game-mobile-modal" link="https://raw.githubusercontent.com/denpurna/nezuko-store/main/modal-game-mobile.html" class="col-xs-3">
                                     <div class="push-5">
-                              <i id="btn-icon-1" class="fas fa-gamepad fa-2x text-success"></i>
+                              <i class="fas fa-gamepad fa-2x text-success"></i>
                               <div class="font-w600 push-5-t">Game</div>
                               </div>
                               </div>
@@ -257,52 +245,70 @@
 
         <!-- Apps Modal -->
         <!-- Opens from the button in the header -->
-        <div class="modal fade" id="apps-modal" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-sm modal-dialog modal-dialog-center modal-dialog-popout">
-            <div class="modal-content">
-              <!-- Apps Block -->
-              <div id="content-modal"></div>
-              <!-- END Apps Block -->
+        <div class="modal fade" id="game-mobile-modal" tabindex="-1" role="document" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-popout">
+            <div class="modal-content game-mobile-content">
             </div>
           </div>
         </div>
+        <div class="modal fade" id="e-wallet-modal" tabindex="-1" role="document" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-popout">
+            <div class="modal-content e-wallet-content">
+            </div>
+          </div>
+        </div>
+              <!-- Apps Block --
+              <div id="content-modal"></div>
+              <!-- END Apps Block -->
         
         <!-- END Apps Modal -->
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
-        <script src="assets/js/core/jquery.min.js"></script>
-        <script src="assets/js/core/bootstrap.min.js"></script>
-        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
-        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
-        <script src="assets/js/core/jquery.appear.min.js"></script>
-        <script src="assets/js/core/jquery.countTo.min.js"></script>
-        <script src="assets/js/core/jquery.placeholder.min.js"></script>
-        <script src="assets/js/core/js.cookie.min.js"></script>
-        <script src="assets/js/app.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/bootstrap.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.appear.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.countTo.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/js.cookie.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/app.js"></script>
         
         <!-- Page Plugins -->
-        <script src="assets/js/plugins/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.js"></script>
 
         <!-- Page JS Code -->
         
 <script type="text/javascript">
+  
   $(document).ready(function() {
     var url_modal_game_mobile,
         url_menu_atas,
         url_menu_tengah,
-        url_slider_promo;
-        
+        url_slider_promo,
+        url_modal_pln,
+        url_modal_e_wallet;
+  setTimeout(function(){
+  $('body').addClass('loaded');
+  }, 2000);
+  
     url_modal_game_mobile = "modal-game-mobile.html";
+    url_slider_promo = "https://raw.githubusercontent.com/denpurna/nezuko-store/main/slider-info-promo.html";
     // load data html
     loadslider();
-    //loadmenuatas();
+    
     
     //function
     function loadslider(){
-    $.ajax({url: "slider-info-promo.html", success: function(result){
+    $.ajax({
+      url: url_slider_promo,
+      dataType : 'html',
+      beforeSend : function(){
+        
+      },
+      success: function(result){
         $("#slider-info-promo").html(result);
-        //$("#myModal").modal('show'); 
-
     }});
     }
     
@@ -315,18 +321,41 @@
 
     }});
     }
-    url_slider_promo = "slider-info-promo.html";
-    
-    $("#btn-icon-1").on("click", function() {
-      $('body').load(url);
-    //alert("hi")
-    });
-    $("#btn-icon-paket-data").on("click", function() {
-    $('#content-modal').load(url_modal_game_mobile);
-    //alert("hi")
-    });
+  $("#e-wallet-modal").on("show.bs.modal", function(){
+    alert($('#btn-ewallet').attr('link'));
+    if($(".e-wallet-content").html()){
+    $('.e-wallet-content').load($("#btn-ewallet").attr("link"));
+    }
+    $("#game-mobile-modal").modal("hide");
   });
-  
+
+  $("#e-wallet-modal").on("hide.bs.modal", function(){
+    $("#game-mobile-modal").modal("show");
+  });
+    
+    $("#btn-icon-paket-data").on("click", function() {
+    $('.modal-content').load($(this).attr("link"));
+    //alert("hi")
+    });
+    $("#btn-icon-game-mobile").on("click", function() {
+    $.ajax({
+      url: $(this).attr("link"),
+      dataType : 'html',
+      beforeSend : function(){
+    
+      },
+      success: function(result){
+        $(".game-mobile-content").html(result);
+    }});
+    //$('.game-mobile-content').load(url);
+    //alert("hi")
+    });
+    $("#btn-app").on("click", function() {
+    $('.apps-modal').load($(this).attr("href"));
+    //alert("hi")
+    });
+
+  });
             
         </script>
     </body>
